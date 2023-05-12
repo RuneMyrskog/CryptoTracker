@@ -104,7 +104,7 @@ function CoinRow(props) {
                 
                 <span> <img src={image} className="coin-icon"/> {id} </span>
                 <p>{"$ " + price.toFixed(2)}</p>
-                <p className={hr24_change < 0 ? "red" : "green"}> {hr24_change}</p>
+                <p className={hr24_change < 0 ? "red" : "green"}> {hr24_change + " %"}</p>
                 <p>{"$ " + numberWithCommas(market_cap)}</p>
                 
             </div>
