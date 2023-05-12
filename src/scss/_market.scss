@@ -1,0 +1,109 @@
+@mixin grid-row {
+    display: grid;
+    grid-template-columns: 16fr 25fr 25fr 25fr;
+    align-items: center;
+    text-align: right;
+    span:first-child {
+        text-align: left;
+    }
+    p:first-child {
+        text-align: left;
+    }
+}
+
+#market {
+    padding: 10rem 0;
+    width: 100%;
+    font-size: 1.5rem;
+
+    @media (max-width: 1200px) {
+            font-size: 1rem;
+        }
+    
+
+    .container {
+        width: 70rem;
+        max-width: 80vw;
+        // overflow-x: scroll;
+    }
+    #market-grid-container {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    #market-grid {
+       
+        min-width: 45rem;
+       
+    }
+
+    #market-grid-top-row {
+        @include grid-row;
+        background-color: $light-purple;
+        padding: 0.5rem 1rem;
+        
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom:2rem;
+    }   
+
+    .coin-icon {
+        width: 3rem;
+    }
+
+    .coin-row-container {
+        @include grid-row;
+        transition: all 0.2s ease-in-out;
+        border-bottom: 1px solid white;
+        padding: 1rem 1rem;
+        display: grid;
+
+        
+
+        &:hover {
+            background-color: #88389755;
+        }
+
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            
+            text-transform: capitalize;
+            gap: 1rem;
+        }
+    }
+
+    #pageButtonsContainer {
+        display: flex;
+        width:fit-content;
+        gap: 3rem;
+        margin: 1rem auto 0 auto;
+
+        .button-span {
+            @include button;
+
+            // padding: 0 2rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.active-page {
+                color: $light-purple;
+            }
+
+
+        }
+    }
+}
+

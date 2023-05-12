@@ -11,10 +11,14 @@
 
 body {
   background-color: #0f051d;
-  height: 200vh;
   overflow-y: scroll;
   color: white;
   font-family: Space Grotesk, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .flex-row {
@@ -34,6 +38,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -70,7 +75,7 @@ nav.fixed-nav {
   font-size: 1.2rem;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   font-family: Space Grotesk, sans-serif;
   color: white;
   max-width: 60rem;
@@ -188,5 +193,139 @@ nav.fixed-nav {
   }
   .hero-container h1 {
     font-size: 3rem;
+  }
+}
+
+#crypto {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#market {
+  padding: 10rem 0;
+  width: 100%;
+  font-size: 1.5rem;
+}
+@media (max-width: 1200px) {
+  #market {
+    font-size: 1rem;
+  }
+}
+#market .container {
+  width: 70rem;
+  max-width: 80vw;
+}
+#market #market-grid-container {
+  width: 100%;
+  overflow-x: scroll;
+}
+#market #market-grid {
+  min-width: 45rem;
+}
+#market #market-grid-top-row {
+  display: grid;
+  grid-template-columns: 16fr 25fr 25fr 25fr;
+  align-items: center;
+  text-align: right;
+  background-color: #ff00ea;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+#market #market-grid-top-row span:first-child {
+  text-align: left;
+}
+#market #market-grid-top-row p:first-child {
+  text-align: left;
+}
+#market h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#market .coin-icon {
+  width: 3rem;
+}
+#market .coin-row-container {
+  display: grid;
+  grid-template-columns: 16fr 25fr 25fr 25fr;
+  align-items: center;
+  text-align: right;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid white;
+  padding: 1rem 1rem;
+  display: grid;
+}
+#market .coin-row-container span:first-child {
+  text-align: left;
+}
+#market .coin-row-container p:first-child {
+  text-align: left;
+}
+#market .coin-row-container:hover {
+  background-color: rgba(136, 56, 151, 0.3333333333);
+}
+#market .coin-row-container .red {
+  color: red;
+}
+#market .coin-row-container .green {
+  color: green;
+}
+#market .coin-row-container span {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 1rem;
+}
+#market #pageButtonsContainer {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 3rem;
+  margin: 1rem auto 0 auto;
+}
+#market #pageButtonsContainer .button-span:hover {
+  cursor: pointer;
+  color: #ff00ea;
+  transition: all 0.2s ease-in-out;
+}
+#market #pageButtonsContainer .button-span:hover {
+  cursor: pointer;
+}
+#market #pageButtonsContainer .button-span.active-page {
+  color: #ff00ea;
+}
+
+.loader-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.loader-container .loader {
+  margin: 10rem auto;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background-image: linear-gradient(#fff 16px, transparent 0), linear-gradient(#ff00ea 16px, transparent 0), linear-gradient(#ff00ea 16px, transparent 0), linear-gradient(#fff 16px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left top, left bottom, right top, right bottom;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
+  100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=main.css.map */

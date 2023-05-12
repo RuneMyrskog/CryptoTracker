@@ -16,14 +16,6 @@ nav {
     }
 }
 
-@mixin nav-button {
-    &:hover {
-        cursor: pointer;
-        color: $light-purple;
-        transition: all 0.2s ease-in-out;
-    }
-}
-
 
 #navbar {
     align-items: center;
@@ -31,7 +23,7 @@ nav {
     font-size: 1.2rem;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     font-family: Space Grotesk,sans-serif;
     color:white;
     max-width: 60rem;
@@ -55,7 +47,7 @@ nav {
     }
 
     a, i {
-        @include nav-button;
+        @include button;
     }
 
     a {
@@ -115,7 +107,7 @@ nav {
     }
 
     #closeMobileNav {
-        @include nav-button;
+        @include button;
 
         color: white;
         font-size: 1.5rem;
@@ -132,7 +124,7 @@ nav {
     }
 
     a {
-        @include nav-button;
+        @include button;
         font-size: 2rem;
         color: white;
         text-decoration: none;

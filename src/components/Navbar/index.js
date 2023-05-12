@@ -6,7 +6,6 @@ function Navbar() {
 
     const onScroll = () => {
         if(window.scrollY > 150) {
-            console.log("dfs")
             setFixed(true);
         } else {
             setFixed(false);
@@ -21,7 +20,7 @@ function Navbar() {
 
     return (
         <>
-        <nav class={fixed ? "fixed-nav" : ""}>
+        <nav className={fixed ? "fixed-nav" : ""}>
             <div id="navbar">
                 <a href="/"><span className="navTitle">CRYPTO</span><span className="navTitle">TRACK</span></a>
                 <ul>
@@ -31,8 +30,8 @@ function Navbar() {
                     <a href="/#join">Join</a>
                 </ul>
                 <div className="flex-row" id="navExternalsContainer">
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-discord"></i>
+                    <i className="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-discord"></i>
                 </div>
                 <i onClick={openCloseMobile} className="fa-solid fa-bars-staggered hamburger-menu"></i>
             </div>

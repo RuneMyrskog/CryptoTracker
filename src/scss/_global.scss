@@ -2,6 +2,14 @@
 $home-background: #0f051d;
 $light-purple: #ff00ea;
 
+@mixin button {
+    &:hover {
+        cursor: pointer;
+        color: $light-purple;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,10 +23,14 @@ $light-purple: #ff00ea;
 
 body {
     background-color: $home-background;
-    height: 200vh;
     overflow-y: scroll;
     color: white;
     font-family: Space Grotesk, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .flex-row {
@@ -36,6 +48,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {

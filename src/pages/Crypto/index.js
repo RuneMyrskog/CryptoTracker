@@ -2,9 +2,11 @@
 
 function Crypto() {
     return (
-        <div className="crypto">
-
-        </div>
+        <section id="crypto">
+            <div className="container">
+                <h2>COIN PAGE</h2>
+            </div>
+        </section>
     );
 }
 
