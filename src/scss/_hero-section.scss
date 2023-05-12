@@ -1,0 +1,27 @@
+#hero-section {
+    background-image: linear-gradient(#130749 30%, #0f051d 70%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 60rem;
+    text-align: center;
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    @media (max-width: 600px) {
+        max-width: 80vw;
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+}
