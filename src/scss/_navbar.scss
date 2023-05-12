@@ -1,0 +1,140 @@
+nav {
+    // background-color: transparent;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.fixed-nav {
+    background-color: var(--home-background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+@mixin nav-button {
+    &:hover {
+        cursor: pointer;
+        color: $light-purple;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+
+#navbar {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-family: Space Grotesk,sans-serif;
+    color:white;
+    max-width: 60rem;
+
+    :hover {
+        cursor: pointer;
+    }
+
+    .navTitle:nth-child(1) {
+        color: white;
+    }
+    .navTitle:nth-child(2) {
+        color: $light-purple;
+    }
+
+    span {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    a, i {
+        @include nav-button;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    ul {
+   
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+    }
+
+    #navExternalsContainer {
+        gap: 1rem;
+    }
+
+    //mobile navigation
+    .hamburger-menu {
+        display: none;
+    }
+
+
+    @media (max-width: 900px) {
+        #navExternalsContainer, ul {
+            display: none;
+        }
+        .hamburger-menu {
+            display: block;
+        }
+    }
+
+    
+
+}
+
+#mobile-navbar {
+    position: fixed;
+    height: 100vh;
+    width: 20rem;
+    max-width: 100%;
+    left: -20rem;
+    top: 0;
+    background-color: lighten($home-background, 10%);
+    font-family: Space Grotesk, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+
+    &.mobile-showing {
+        left: 0;
+        z-index: 3;
+    }
+
+    #closeMobileNav {
+        @include nav-button;
+
+        color: white;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    a {
+        @include nav-button;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+    }
+
+}

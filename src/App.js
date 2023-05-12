@@ -1,9 +1,9 @@
-import Navbar from './components/Navbar';
-import Home from './Home';
-import Crypto from './Crypto';
-import {Route, Routes} from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Crypto from "./pages/Crypto";
+import {Route, Routes} from "react-router-dom";
+import "./dist/css/main.css";
 
-import './App.css';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/coin" element={<Crypto />}>
-          <Route path=":coinId" element={<Crypto />}></Route>
+        <Route path=":coinId" element={<Crypto />}></Route>
         </Route>
       </Routes>
     </div>
