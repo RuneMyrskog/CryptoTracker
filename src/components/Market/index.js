@@ -1,31 +1,29 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { coinData } from "./coinData";
+import Loader from "../Loader";
 
 function Market () {
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [apiLoad, setApiLoad] = useState(true)
     
     const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=${currentPage}&sparkline=false`;
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const response = await fetch(url);
-    //         const json = await response.json();
-    //         setData(json);
-    //     };
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch(url);
+            const json = await response.json();
+            setData(json);
+        };
 
-    //     fetchData();s
+        fetchData();
 
-    // }, [url]);
+    }, [url]);
 
-    // setTimeout(() => {setData(coinData)}, 1000)
 
     const PageButton = (props) => {
         const pageNumber = props.pageNumber;
         return (
-            <span key={pageNumber} onClick={() => setCurrentPage(pageNumber)}
+            <span onClick={() => setCurrentPage(pageNumber)}
                 className={pageNumber === currentPage ? "button-span active-page" : "button-span"}>
                 {pageNumber}
             </span>
@@ -36,19 +34,11 @@ function Market () {
         const pageNumbers = [1, 2, 3, 4, 5]
         return (
             <div id="pageButtonsContainer">
-                {pageNumbers.map((i) => (<PageButton pageNumber={i} />))}
+                {pageNumbers.map((i) => (<PageButton key={i} pageNumber={i} />))}
                 
             </div>);
     }
 
-    const Loader = () => {
-        return (
-        <div className="loader-container">
-            <span className="loader"></span>
-        </div>)
-    }
-
-    setTimeout(()=>{setData(coinData)}, 1000)
     const coinRows = () => {
         return (
             <div id="market-grid-coin-rows-container">
@@ -104,7 +94,7 @@ function CoinRow(props) {
                 
                 <span> <img src={image} className="coin-icon"/> {id} </span>
                 <p>{"$ " + price.toFixed(2)}</p>
-                <p className={hr24_change < 0 ? "red" : "green"}> {hr24_change + " %"}</p>
+                <p className={hr24_change < 0 ? "text-red" : "text-green"}> {hr24_change + " %"}</p>
                 <p>{"$ " + numberWithCommas(market_cap)}</p>
                 
             </div>

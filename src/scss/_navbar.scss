@@ -93,18 +93,21 @@ nav {
     max-width: 100%;
     left: -20rem;
     top: 0;
-    background-color: lighten($home-background, 10%);
+    background-color: $home-background;
+    border-right: 1px solid rgba(255, 255, 255, 0.398);
     font-family: Space Grotesk, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease-in-out;
+    z-index:10;
 
     &.mobile-showing {
         left: 0;
-        z-index: 10;
     }
+
+    
 
     #closeMobileNav {
         @include button;

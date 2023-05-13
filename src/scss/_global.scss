@@ -17,6 +17,10 @@ $light-purple: #ff00ea;
     scroll-behavior: smooth;
 }
 
+.text-capitalize {
+    text-transform: capitalize;
+}
+
 .text-purple {
     color: $light-purple;
 }
@@ -40,7 +44,7 @@ a {
 
 .container {
     margin: 0 auto;
-    max-width: 60rem;
+    max-width: 70rem;
     @media (max-width: 600px) {
         max-width: 80vw;
     }
@@ -61,4 +65,12 @@ a {
     background-color: $home-background;
     // border: 1px solid #fff;
     border-radius: 20px;
+}
+
+.text-green {
+    color: rgb(17, 168, 85);
+}
+
+.text-red {
+    color: rgb(246, 56, 46)
 }

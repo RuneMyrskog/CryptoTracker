@@ -1,6 +1,92 @@
 #crypto {
     height: 100vh;
+    background-image: linear-gradient(#130749 30%, #0f051d 70%);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 900px) {
+        height: 120vh;
+    }
+
+    .coin-icon-large {
+        width: 12rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f3f2f4;
+    }
+
+    .coin-title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    span {
+        font-size: 1.25rem;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 80rem;
+        padding: 0 1rem;
+
+        @media (max-width: 900px) {
+                flex-direction: column;
+                margin-top: 10rem;
+            }
+    }
+
+    
+
+    .left-coin-container {
+        height: fit-content;
+        align-items: center;
+        border-right: 2px solid #f3f2f4;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        width: 30%;
+        @media (max-width: 900px) {
+            width: 80%;
+            border-right: none;
+            border-bottom: 2px solid #f3f2f4;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .right-coin-container {
+        padding: 2rem;
+        width: 70%;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
+    .description {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+        height: 20rem;
+        overflow-y: auto;
+    }
+
+    .coin-content-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (max-width: 900px) {
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+    }
+
+    
+
 }

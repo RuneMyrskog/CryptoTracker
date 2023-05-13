@@ -1,0 +1,31 @@
+#join {
+    padding: 10rem 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #discordButton {
+        background-color: $light-purple;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        border: 2px solid $light-purple;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            cursor:pointer;
+            border: 2px solid white;
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+#footer {
+    background-color: black;
+    padding: 2rem;
+
+    ul {
+        display: flex;
+        gap: 0.5rem;
+
+        i {
+            @include button;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+}

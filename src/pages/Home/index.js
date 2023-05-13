@@ -1,6 +1,9 @@
 
 import Market from "../../components/Market";
 import ChooseUs from "../../components/ChooseUs";
+import Discord from "../../components/Discord";
+import Footer from "../../components/Footer";
+
 import blockchainBackground from "../../images/blockchain-home-background.png"
 
 function Home() {
@@ -19,7 +22,8 @@ function Home() {
         </section>
         <Market/>
         <ChooseUs/>
-
+        <Discord/>
+        <Footer/>
         </>
     );
 }
