@@ -7,7 +7,7 @@
 The website is connected to the Coingecko API, a popular source of data for cryptocurrency.
 </p>
 
-👉 Live Demo: <a href='https://crypto-track-hq.vercel.app/'>Coindom Demo</a>
+👉 Live Demo: <a href='https://crypto-track-hq.vercel.app/'>Crypto Track Demo</a>
 
 <h3>Built with:</h3>
 
