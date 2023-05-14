@@ -1,4 +1,4 @@
-<div align='center'><img style="width:16%" src='https://assets.coingecko.com/coins/images/4128/large/solana.png?1640133422'/></div>
+<div  align='center'><img style="width:25%;border-radius: 30%" src='https://assets.coingecko.com/coins/images/4128/large/solana.png?1640133422'/></div>
 
 <h2>About the project</h2>
 
