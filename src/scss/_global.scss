@@ -1,6 +1,8 @@
 
 $home-background: #0f051d;
 $light-purple: #ff00ea;
+$green: rgb(19, 193, 109);
+$red: rgb(246, 56, 46);
 
 @mixin button {
     &:hover {
@@ -68,9 +70,9 @@ a {
 }
 
 .text-green {
-    color: rgb(17, 168, 85);
+    color: $green;
 }
 
 .text-red {
-    color: rgb(246, 56, 46)
+    color: $red;
 }

@@ -57,7 +57,7 @@ a {
 }
 
 .text-green {
-  color: rgb(17, 168, 85);
+  color: rgb(19, 193, 109);
 }
 
 .text-red {
@@ -294,6 +294,9 @@ nav.fixed-nav {
   font-size: 1.25rem;
   height: 20rem;
   overflow-y: auto;
+}
+#crypto .description a {
+  color: rgb(19, 193, 109);
 }
 #crypto .coin-content-top {
   display: flex;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../../components/Loader";
+import DOMPurify from "dompurify";
 
 function Crypto() {
     const { coinId } = useParams();
@@ -41,7 +42,12 @@ function Crypto() {
     }
 
     const RightCoinSection = () => {
-        const hr_24change = coin.market_data.price_change_percentage_24h;
+        let hr_24change = coin.market_data.price_change_percentage_24h;
+        let description = DOMPurify.sanitize(coin.description.en);
+        console.log(description)
+        if (description === "\r\n"){
+            description = "No description available";
+        }
         return (
             <>
                 
@@ -66,8 +72,11 @@ function Crypto() {
                 </div>
 
                 <div class="description">
-                    <p>
-                        {coin.description.en}
+                    <p dangerouslySetInnerHTML={
+                        {
+                        __html: description,
+                        }}>
+                        
                     </p>
                 </div>
                 
